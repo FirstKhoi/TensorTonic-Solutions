@@ -1,9 +1,8 @@
 import numpy as np
 
-def relu(x):
+def relu(x) -> np.ndarray:
     """
-    Implement ReLU activation function.
+    Returns a NumPy array with the same shape as x.
     """
-    relu = np.maximum(0 ,x)
-    return relu
-    pass
+    # Write code here
+    return np.maximum(0, x)

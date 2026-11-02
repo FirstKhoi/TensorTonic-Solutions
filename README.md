@@ -51,6 +51,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Overlapping Max Pooling | Implement AlexNet overlapping max pooling with a 3x3 window and stride two across spatial dimensions. | https://www.tensortonic.com/research/alexnet/alexnet-pooling |
 | ReLU Activation Function | Implement AlexNet's elementwise ReLU activation, preserving positive values while setting negative values to zero. | https://www.tensortonic.com/research/alexnet/alexnet-relu |
 | Reset Gate | Implement a GRU reset gate that controls how much of the previous hidden state contributes to the candidate state. | https://www.tensortonic.com/research/gru/gru-reset-gate |
+| Update Gate | Implement a GRU update gate that balances retained hidden memory against the new candidate representation. | https://www.tensortonic.com/research/gru/gru-update-gate |
 | Complete LSTM Cell | Build a complete LSTM cell with forget, input, candidate, cell-state, output, and hidden-state calculations. | https://www.tensortonic.com/research/lstm/lstm-cell |
 | Cell State Update | Implement the LSTM cell-state update by combining retained memory with input-gated candidate information. | https://www.tensortonic.com/research/lstm/lstm-cell-state |
 | Forget Gate | Implement an LSTM forget gate by combining the previous hidden state and current input with a sigmoid projection. | https://www.tensortonic.com/research/lstm/lstm-forget-gate |

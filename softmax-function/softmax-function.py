@@ -6,11 +6,7 @@ def softmax(x: list) -> np.ndarray:
     """
     # Write code here
     x = np.array(x, dtype=float)
-    if x.ndim == 1:
-        shifted = x - np.max(x)
-        exp_vals = np.exp(shifted)
-        return exp_vals / np.sum(exp_vals)
-
-    shifted = x - np.max(x, axis=1, keepdims=True)
-    exp_vals = np.exp(shifted)
-    return exp_vals / np.sum(exp_vals, axis=1, keepdims=True)
+ 
+    numerator = np.exp(x - np.max(x, axis=-1, keepdims=True))
+    denominator = np.sum(numerator, axis=-1, keepdims=True)
+    return numerator / denominator

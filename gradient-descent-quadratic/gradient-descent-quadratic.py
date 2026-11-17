@@ -1,10 +1,10 @@
-def gradient_descent_quadratic(a, b, c, x0, lr, steps):
+def gradient_descent_quadratic(a: float, b: float, c: float, x0: float, lr: float, steps: int) -> float:
     """
-    Return final x after 'steps' iterations.
+    Returns the final scalar x after the requested iterations.
     """
     # Write code here
     for i in range(steps):
-       gradient = 2*a*x0 + b
-       x0 = x0 - lr * gradient
+        grad = 2 * a * x0 + b
+        x0 -= lr*grad
+
     return x0
-    pass

@@ -22,6 +22,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Compute Covariance Matrix | Compute a sample covariance matrix from centered observations, preserving feature-to-feature relationships. | https://www.tensortonic.com/problems/covariance-matrix |
 | Implement Cross-Entropy Loss | Compute multiclass cross-entropy loss from class probabilities and integer labels with stable logarithms. | https://www.tensortonic.com/problems/cross-entropy-loss |
 | Activation Functions | Implement ReLU, sigmoid, tanh, Leaky ReLU, GELU, and Swish with their analytical derivatives. | https://www.tensortonic.com/problems/dl-activation-functions |
+| Computational Graph & Autograd | Build a minimal autograd engine that performs forward and backward passes on a computational graph. | https://www.tensortonic.com/problems/dl-autograd |
 | Backpropagation (Single Hidden Layer) | Backpropagate MSE loss through a one-hidden-layer NumPy network to compute gradients for every weight and bias. | https://www.tensortonic.com/problems/dl-backpropagation |
 | Batch Normalization | Implement batch normalization for training and inference, including batch statistics and running-statistic updates. | https://www.tensortonic.com/problems/dl-batch-normalization |
 | Dropout | Apply inverted dropout from a supplied binary mask during training and preserve the input unchanged during evaluation. | https://www.tensortonic.com/problems/dl-dropout |

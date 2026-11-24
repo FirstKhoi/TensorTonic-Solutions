@@ -14,18 +14,21 @@ def adam_step(
     """
     Returns (param_new, m_new, v_new) as NumPy arrays.
     """
-    # Write code here
-    param = np.asarray(param, dtype=float)
-    grad = np.asarray(grad, dtype=float)
-    m = np.asarray(m, dtype=float)
-    v = np.asarray(v, dtype=float)
+    m_t = np.asarray(m)
+    v_t = np.asarray(v) 
+    grad = np.asarray(grad) 
+    theta = np.asarray(param) 
 
-    m_t = beta1 * m + (1.0 - beta1) * grad
-    v_t = beta2 * v + (1.0 - beta2) * (grad ** 2)
-    
-    m_hat = m_t / (1 - beta1 ** t)
-    v_hat = v_t / (1 - beta2 ** t)
+    # first momentum and second momentum  
+    m_t = (beta1 * m_t) + (grad - beta1 * grad) 
+    v_t = (beta2 * v_t) + ((1 - beta2) * (grad**2))
 
-    para_update = param - lr * (m_hat / (np.sqrt(v_hat) + eps))
+    # bias correction 
+    hat_m_t =  m_t / (1 - (beta1 ** t))
+    hat_v_t =  v_t / (1 - (beta2 ** t))
 
-    return para_update, m_t, v_t
+    # update params 
+    theta = theta - (lr * (hat_m_t / (np.sqrt(hat_v_t) + eps)))
+
+
+    return (theta, m_t, v_t)
